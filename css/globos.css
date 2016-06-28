@@ -1,0 +1,120 @@
+#globo-ayuda-1{
+    width: 350px;
+    height: 150px;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px #555;
+    background-color: #666;
+    position: relative;
+    color: #FFF;
+}
+#globo-ayuda-1:before{
+    content: "";
+    width: 0;
+    position: absolute;
+    border-style: solid;
+    border-width: 0 5px 10px 5px;
+    border-color: #EEE transparent #666 transparent;
+    top: -10px;
+}
+
+#globo-ayuda-2{
+    width: 350px;
+    height: 100px;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px #555;
+    background-color: #666;
+    position: relative;
+    color: #FFF;
+}
+#globo-ayuda-2:before{
+    content: "";
+    width: 0;
+    position: absolute;
+    border-style: solid;
+    border-width: 0 5px 10px 5px;
+    border-color: #EEE transparent #666 transparent;
+    top: -10px;
+}
+
+#globo-ayuda-3{
+    width: 350px;
+    height: 100px;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px #555;
+    background-color: #666;
+    position: relative;
+    color: #FFF;
+}
+#globo-ayuda-3:before{
+    content: "";
+    width: 0;
+    position: absolute;
+    border-style: solid;
+    border-width: 0 5px 10px 5px;
+    border-color: #EEE transparent #666 transparent;
+    top: -10px;
+}
+
+#globo-ayuda-4{
+    width: 350px;
+    height: 100px;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px #555;
+    background-color: #666;
+    position: relative;
+    color: #FFF;
+}
+#globo-ayuda-4:before{
+    content: "";
+    width: 0;
+    position: absolute;
+    border-style: solid;
+    border-width: 0 5px 10px 5px;
+    border-color: #EEE transparent #666 transparent;
+    top: -10px;
+}
+#main{
+	background: url("../fondo.png");
+}
+
+.container > .navbar-header, .container-fluid > .navbar-header, .container > .navbar-collapse, .container-fluid > .navbar-collapse{
+	background-color: #A3195B;
+	color: white;
+	border-color: #A3195B;
+}
+.navbar-inverse .navbar-brand, .navbar-inverse .navbar-nav>li>a{
+	color: white;
+}
+
+.navbar {
+  position: relative;
+  min-height: 50px;
+    
+}
+
+body{
+	background-color: #EDEDED;
+
+}
+.panel-primary>.panel-heading
+{
+	background-image: 
+	linear-gradient(to bottom,#A3195B 0,#A3195B 100%);
+	border-color: #A3195B;
+
+}
+
+.panel-primary{
+	border-color: #A3195B;
+
+}
+
+#preguntas{
+	padding-top: 10;
+}
+
+

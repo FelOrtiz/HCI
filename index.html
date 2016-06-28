@@ -17,6 +17,10 @@
     <link href="css/bootstrap-theme.min.css" rel="stylesheet">
     <link href="css/animate.css" rel="stylesheet">
     <link rel="stylesheet" href="css/magnific-popup.css">
+
+    <link rel="stylesheet" href="css/globos.css">
+
+
     <link rel="stylesheet" href="fancybox/source/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen" />
     <link rel="stylesheet" href="fancybox/source/helpers/jquery.fancybox-buttons.css?v=1.0.5" type="text/css" media="screen" />
     <link rel="stylesheet" href="fancybox/source/helpers/jquery.fancybox-thumbs.css?v=1.0.7" type="text/css" media="screen" />
@@ -28,18 +32,218 @@
 </head>
 
 <body role="document">
+    
     <nav class="navbar navbar-inverse navbar-top">
         <div class="container">
             <div class="navbar-header">
-                <a class="navbar-brand">Trivia - Colegio Virtual</a>
+                <a class="navbar-brand">Trivia - Liceo Virtual</a>
             </div>
         </div>
     </nav>
 
-    <div class="container-fluid " id="preguntas">
+    <!--Menu inicial  -->
+
+    <div class="container-fluid" id="main">
+        
+        <div id="inicio" style="margin-top:485px;margin-bottom:10px;">
+            <p>
+            <div class="row">
+                <div class="col-xs-12">
+                    <button id="comenzar-btn" class="btn btn-primary btn-block">Jugar</button>
+
+                    <button id="estadisticas-btn" class="btn btn-primary btn-block">Estadisticas</button>
+
+                    <button id="instrucciones-btn" class="btn btn-primary btn-block">¿Cómo jugar?</button>
+                </div>
+            </div>
+            </p>
+        </div>
+    </div>
+
+    <div class="container-fluid hidden" id="instrucciones">
+        
+        <div class="row" id="ins-barra-top"> 
+            <div class="col-xs-12">
+                <div class="well " style="padding:5px;margin-bottom:5px;margin-top:20px;">
+                    <div class="row">
+                        <div class="col-xs-12 text-center">
+                            <div class="progress" style="margin-bottom:0px;">
+                                <div id="pr-0" class="progress-bar progress-bar-striped progress-bar-warning rubberBand animated" data-toggle="tooltip" data-placement="top" title="Pregunta 1 de 10" style="width: 10%">
+                                    <b>1</b>
+                                </div>
+                                <div id="pr-0" class="progress-bar progress-bar-striped margin" data-toggle="tooltip" data-placement="top" title="Pregunta 2 de 10" style="width: 10%">
+                                    <b>2</b>
+                                </div>
+                                <div id="pr-0" class="progress-bar progress-bar-striped margin" data-toggle="tooltip" data-placement="top" title="Pregunta 3 de 10" style="width: 10%">
+                                    <b>3</b>
+                                </div>
+                                <div id="pr-0" class="progress-bar progress-bar-striped margin" data-toggle="tooltip" data-placement="top" title="Pregunta 4 de 10" style="width: 10%">
+                                    <b>4</b>
+                                </div>
+                                <div id="pr-0" class="progress-bar progress-bar-striped margin" data-toggle="tooltip" data-placement="top" title="Pregunta 5 de 10" style="width: 10%">
+                                    <b>5</b>
+                                </div>
+                                <div id="pr-0" class="progress-bar progress-bar-striped margin" data-toggle="tooltip" data-placement="top" title="Pregunta 6 de 10" style="width: 10%">
+                                    <b>6</b>
+                                </div>
+                                <div id="pr-0" class="progress-bar progress-bar-striped margin" data-toggle="tooltip" data-placement="top" title="Pregunta 7 de 10" style="width: 10%">
+                                    <b>7</b>
+                                </div>
+                                <div id="pr-0" class="progress-bar progress-bar-striped margin" data-toggle="tooltip" data-placement="top" title="Pregunta 8 de 10" style="width: 10%">
+                                    <b>8</b>
+                                </div>
+                                <div id="pr-0" class="progress-bar progress-bar-striped margin" data-toggle="tooltip" data-placement="top" title="Pregunta 9 de 10" style="width: 10%">
+                                    <b>9</b>
+                                </div>
+                                <div id="pr-0" class="progress-bar progress-bar-striped margin" data-toggle="tooltip" data-placement="top" title="Pregunta 10 de 10" style="width: 10%">
+                                    <b>10</b>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="globo-ayuda-1">
+            Aquí podras ver el avance que llevas, el color naranjo denota en que etapa te encuentras, el azul las etapas que te faltan, el verde las etapas correctas y el rojo las incorrectas.
+            <button id="btn-next-1" class="btn btn-primary btn-block">Siguiente</button>
+        </div>
+        <div id="nivel-demo">
+            <p>
+            <div class="row hidden" id="ins-img1">
+                <div class="col-xs-6">
+                    <div class="front fadeInDown animated fancybox" id="img1-demo" href="javascript:;">
+                        <img id="image1-1" src="img/adn.jpg" class="img-responsive img-thumbnail">
+                    </div>
+                </div>
+                <div class="col-xs-6">
+                    <div id="1">
+                    <div class="front fadeInRight animated" id="img1-demo" href="javascript:;">
+                        <img id="image1-2" src="img/cromosoma.jpg" class="img-responsive img-thumbnail">
+                    </div>
+                    <div class="back hidden" id="text1">
+                        <div class="text-container img-thumbnail">
+                        <small>Orgánulo en forma de filamento que se halla en el interior del núcleo de una célula eucariota y que contiene el material genético; el número de <b>cromosomas</b> es constante para las células de una misma especie.</small>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+            </p>
+            <p>
+            <div class="row hidden" id="ins-img2">
+                <div class="col-xs-6">
+                    <div class="fadeInLeft animated" id="img1-demo" href="javascript:;">
+                        <img id="image1-3" src="img/globulos.jpg" class="img-responsive img-thumbnail">
+                    </div>
+                </div>
+                <div class="col-xs-6">
+                    <div  class="fadeInUp animated" id="img1-demo" href="javascript:;">
+                        <img id="image1-4" src="img/bacteria.jpg" class="img-responsive img-thumbnail">
+                    </div>
+                </div>
+            </div>
+            </p>
+            <hr>
+            <div id="globo-ayuda-2" class="hidden">
+                En cada nivel debes elegir entre cuatro fotos que representarán...
+                <button id="btn-next-2" class="btn btn-primary btn-block">Siguiente</button>
+            </div>
+            <div class="row hidden" id="ins-concepto">
+                <div class="col-xs-12">
+                    <div class="well well-sm">
+                        <div class="row text-center">
+                            <h3>Cromosoma</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="globo-ayuda-3" class="hidden">
+                Un concepto, el cual esta relacionado con solo una de las fotos.
+                <button id="btn-next-3" class="btn btn-primary btn-block">Siguiente</button>
+            </div>
+            <div class="row text-center hidden" id="ins-siguiente">
+                <div class="col-xs-12">
+                    <button id="buttonContinue-demo" class="btn btn-primary btn-block disabled" 
+                    data-toggle="modal-continue" data-target=".bs-example-modal-sm">Verfificar</button>
+                </div>
+            </div>
+            <div id="globo-ayuda-4" class="hidden">
+                Pincha la imagen correcta y luego siguiente para continuar el cuestionario.
+                <button id="btn-next-4" class="btn btn-primary btn-block">Vuelve al menú</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid hidden" id="estadisticasHistorica">
         <div class="row"> 
             <div class="col-xs-12">
-                <div class="well " style="padding:5px;margin-bottom:5px;">
+                <div class="container-fluid" style="margin-top:20px; margin-bottom:20px;" id="estadisticas222">
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">
+                            Record
+                        </div>
+                        <div class="panel-body" style="padding-bottom:0px;">
+                            <div class="row">
+                                <div class="col-xs-3" >
+                                    <center><h3>1</h3></center>
+                                    <center><h5>peor</h5></center>
+                                </div>
+                                <div class="col-xs-6">
+                                    <center><h1 style="font-size: 4.5em;" > 5,6</h1></center>
+                                    <center><h3>promedio</h3></center>
+                                </div>
+                                <div class="col-xs-3">
+                                    <center><h3>10</h3></center>
+                                    <center><h5>mejor</h5></center>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">
+                            Hace 5 minutos
+                        </div>
+                        <div class="panel-body" style="padding-bottom:0px; padding-left:0px;">
+                            <div id="container00" style="min-width: 310px; height: 160px; max-width: 600px; margin: 0 auto"></div>
+                        </div>
+                    </div>
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">
+                            Hace 30 minutos
+                        </div>
+                        <div class="panel-body" style="padding-bottom:0px; padding-left:0px;">
+                            <div id="container01" style="min-width: 310px; height: 160px; max-width: 600px; margin: 0 auto"></div>
+                        </div>
+                    </div>
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">
+                            Ayer
+                        </div>
+                        <div class="panel-body" style="padding-bottom:0px; padding-left:0px;">
+                            <div id="container02" style="min-width: 310px; height: 160px; max-width: 600px; margin: 0 auto"></div>
+                        </div>
+                    </div>
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">
+                            Hace 5 días
+                        </div>
+                        <div class="panel-body" style="padding-bottom:0px; padding-left:0px;">
+                            <div id="container03" style="min-width: 310px; height: 160px; max-width: 600px; margin: 0 auto"></div>
+                        </div>
+                    </div>
+
+                    <button id="btn-estadisticaHistorica" class="btn btn-primary btn-block">Volver al menú principal</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid hidden" id="preguntas">
+        <div class="row"> 
+            <div class="col-xs-12">
+                <div class="well " style="padding:5px;margin-bottom:5px;margin-top:20px;">
                     <div class="row">
                         <div class="col-xs-12 text-center">
                             <div class="progress" style="margin-bottom:0px;">
@@ -197,7 +401,7 @@
                         <div class="text-container img-thumbnail">
                             <small>La hemoglobina es uno de sus principales componentes, y su función es transportar el oxígeno hacia los diferentes tejidos del cuerpo.</small>
                             </div>
-                        </div>
+                    </div>
                     </div>
                 </div>
                 <div class="col-xs-6">
@@ -242,15 +446,8 @@
             <p>
             <div class="row">
                 <div class="col-xs-6">
-                    <div id="5">
-                    <div class="front fadeInDown animated" id="img4-1" href="javascript:;">
-                        <img id="image4-1" src="img/plantilla.jpg" class="img-responsive img-thumbnail">
-                    </div>
-                    <div class="back hidden" id="text-4">
-                        <div class="text-container img-thumbnail">
-                            <small>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae autem velit hic aspernatur esse nobis quo sunt a veritatis saepe. Officia quis ullam natus cumque quo, placeat reiciendis inventore dignissimos.</small>
-                            </div>
-                        </div>
+                    <div class="fadeInDown animated" id="img4-1" href="javascript:;">
+                        <img id="image4-1" src="img/bacteria_roja.jpg" class="img-responsive img-thumbnail">
                     </div>
                 </div>
                 <div class="col-xs-6">
@@ -264,12 +461,19 @@
             <div class="row">
                 <div class="col-xs-6">
                     <div class="front fadeInLeft animated" id="img4-3" href="javascript:;">
-                        <img id="image4-3" src="img/plantilla.jpg" class="img-responsive img-thumbnail">
+                        <img id="image4-3" src="img/celulas_madre.jpg" class="img-responsive img-thumbnail">
                     </div>
                 </div>
                 <div class="col-xs-6">
-                    <div  class="fadeInUp animated" id="img4-4" href="javascript:;">
-                        <img id="image4-4" src="img/plantilla.jpg" class="img-responsive img-thumbnail">
+                    <div id="5">
+                    <div class="front fadeInUp animated" id="img4-4" href="javascript:;">
+                        <img id="image4-4" src="img/mitocondria.jpg" class="img-responsive img-thumbnail">
+                    </div>
+                    <div class="back hidden" id="text-4">
+                        <div class="text-container img-thumbnail">
+                            <small>Produce energía mediante el consumo de oxígeno, y la producción de dióxido de carbono y agua como productos de la respiración celular.</small>
+                        </div>
+                    </div>
                     </div>
                 </div>
             </div>
@@ -279,7 +483,7 @@
                 <div class="col-xs-12">
                     <div class="well well-sm">
                         <div class="row text-center">
-                            <h3>Texto ejemplo</h3>
+                            <h3>Mitocondria</h3>
                         </div>
                     </div>
                 </div>
@@ -297,18 +501,18 @@
                 <div class="col-xs-6">
                     <div id="6">
                     <div class="front fadeInDown animated" id="img5-1" href="javascript:;">
-                        <img id="image5-1" src="img/plantilla.jpg" class="img-responsive img-thumbnail">
+                        <img id="image5-1" src="img/citoesqueleto.jpg" class="img-responsive img-thumbnail">
                     </div>
                     <div class="back hidden" id="text-5">
                         <div class="text-container img-thumbnail">
-                            <small>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae autem velit hic aspernatur esse nobis quo sunt a veritatis saepe. Officia quis ullam natus cumque quo, placeat reiciendis inventore dignissimos.</small>
+                            <small>Provee soporte interno en las células eucariotas, organiza las estructuras internas e interviene en los fenómenos de transporte, tráfico y división celular.</small>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="col-xs-6">
                     <div class="fadeInRight animated" id="img5-2" href="javascript:;">
-                        <img id="image5-2" src="img/plantilla.jpg" class="img-responsive img-thumbnail">
+                        <img id="image5-2" src="img/cancer.jpg" class="img-responsive img-thumbnail">
                     </div>
                 </div>
             </div>
@@ -317,12 +521,12 @@
             <div class="row">
                 <div class="col-xs-6">
                     <div class="front fadeInLeft animated" id="img5-3" href="javascript:;">
-                        <img id="image5-3" src="img/plantilla.jpg" class="img-responsive img-thumbnail">
+                        <img id="image5-3" src="img/neuronas.jpg" class="img-responsive img-thumbnail">
                     </div>
                 </div>
                 <div class="col-xs-6">
                     <div  class="fadeInUp animated" id="img5-4" href="javascript:;">
-                        <img id="image5-4" src="img/plantilla.jpg" class="img-responsive img-thumbnail">
+                        <img id="image5-4" src="img/cloroplasto.jpg" class="img-responsive img-thumbnail">
                     </div>
                 </div>
             </div>
@@ -332,7 +536,7 @@
                 <div class="col-xs-12">
                     <div class="well well-sm">
                         <div class="row text-center">
-                            <h3>Texto ejemplo</h3>
+                            <h3>Citoesqueleto</h3>
                         </div>
                     </div>
                 </div>
@@ -348,20 +552,13 @@
             <p>
             <div class="row">
                 <div class="col-xs-6">
-                    <div id="7">
-                    <div class="front fadeInDown animated" id="img6-1" href="javascript:;">
-                        <img id="image6-1" src="img/plantilla.jpg" class="img-responsive img-thumbnail">
-                    </div>
-                    <div class="back hidden" id="text-6">
-                        <div class="text-container img-thumbnail">
-                            <small>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae autem velit hic aspernatur esse nobis quo sunt a veritatis saepe. Officia quis ullam natus cumque quo, placeat reiciendis inventore dignissimos.</small>
-                            </div>
-                        </div>
+                    <div class="fadeInDown animated" id="img6-1" href="javascript:;">
+                        <img id="image6-1" src="img/bacteria_verde.jpg" class="img-responsive img-thumbnail">
                     </div>
                 </div>
                 <div class="col-xs-6">
                     <div class="fadeInRight animated" id="img6-2" href="javascript:;">
-                        <img id="image6-2" src="img/plantilla.jpg" class="img-responsive img-thumbnail">
+                        <img id="image6-2" src="img/globulos_blancos.jpg" class="img-responsive img-thumbnail">
                     </div>
                 </div>
             </div>
@@ -370,12 +567,19 @@
             <div class="row">
                 <div class="col-xs-6">
                     <div class="front fadeInLeft animated" id="img6-3" href="javascript:;">
-                        <img id="image6-3" src="img/plantilla.jpg" class="img-responsive img-thumbnail">
+                        <img id="image6-3" src="img/bacteria.jpg" class="img-responsive img-thumbnail">
                     </div>
                 </div>
                 <div class="col-xs-6">
-                    <div  class="fadeInUp animated" id="img6-4" href="javascript:;">
-                        <img id="image6-4" src="img/plantilla.jpg" class="img-responsive img-thumbnail">
+                    <div id="7">
+                    <div class="front fadeInUp animated" id="img6-4" href="javascript:;">
+                        <img id="image6-4" src="img/plasma.jpg" class="img-responsive img-thumbnail">
+                    </div>
+                    <div class="back hidden" id="text-6">
+                        <div class="text-container img-thumbnail">
+                            <small>Es el componente mayoritario de la sangre, representando aproximadamente el 55% del volumen sanguíneo total.</small>
+                        </div>
+                    </div>
                     </div>
                 </div>
             </div>
@@ -385,7 +589,7 @@
                 <div class="col-xs-12">
                     <div class="well well-sm">
                         <div class="row text-center">
-                            <h3>Texto ejemplo</h3>
+                            <h3>Plasma</h3>
                         </div>
                     </div>
                 </div>
@@ -401,20 +605,20 @@
             <p>
             <div class="row">
                 <div class="col-xs-6">
-                    <div id="8">
-                    <div class="front fadeInDown animated" id="img7-1" href="javascript:;">
-                        <img id="image7-1" src="img/plantilla.jpg" class="img-responsive img-thumbnail">
-                    </div>
-                    <div class="back hidden" id="text-7">
-                        <div class="text-container img-thumbnail">
-                            <small>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae autem velit hic aspernatur esse nobis quo sunt a veritatis saepe. Officia quis ullam natus cumque quo, placeat reiciendis inventore dignissimos.</small>
-                            </div>
-                        </div>
+                    <div class="fadeInDown animated" id="img7-1" href="javascript:;">
+                        <img id="image7-1" src="img/golgi.jpg" class="img-responsive img-thumbnail">
                     </div>
                 </div>
                 <div class="col-xs-6">
-                    <div class="fadeInRight animated" id="img7-2" href="javascript:;">
-                        <img id="image7-2" src="img/plantilla.jpg" class="img-responsive img-thumbnail">
+                    <div id="8">
+                    <div class="front fadeInRight animated" id="img7-2" href="javascript:;">
+                        <img id="image7-2" src="img/celulas_madre.jpg" class="img-responsive img-thumbnail">
+                    </div>
+                    <div class="back hidden" id="text-7">
+                        <div class="text-container img-thumbnail">
+                            <small>Son células que se encuentran en todos los organismos multicelulares y que tienen la capacidad de dividirse y diferenciarse en diversos tipos de células especializadas y de autorrenovarse para producir más células madre.</small>
+                        </div>
+                    </div>
                     </div>
                 </div>
             </div>
@@ -428,7 +632,7 @@
                 </div>
                 <div class="col-xs-6">
                     <div  class="fadeInUp animated" id="img7-4" href="javascript:;">
-                        <img id="image7-4" src="img/plantilla.jpg" class="img-responsive img-thumbnail">
+                        <img id="image7-4" src="img/cloroplasto.jpg" class="img-responsive img-thumbnail">
                     </div>
                 </div>
             </div>
@@ -438,7 +642,7 @@
                 <div class="col-xs-12">
                     <div class="well well-sm">
                         <div class="row text-center">
-                            <h3>Texto ejemplo</h3>
+                            <h3>Células madre</h3>
                         </div>
                     </div>
                 </div>
@@ -456,18 +660,18 @@
                 <div class="col-xs-6">
                     <div id="9">
                     <div class="front fadeInDown animated" id="img8-1" href="javascript:;">
-                        <img id="image8-1" src="img/plantilla.jpg" class="img-responsive img-thumbnail">
+                        <img id="image8-1" src="img/celula_eucariota.jpg" class="img-responsive img-thumbnail">
                     </div>
                     <div class="back hidden" id="text-8">
                         <div class="text-container img-thumbnail">
-                            <small>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae autem velit hic aspernatur esse nobis quo sunt a veritatis saepe. Officia quis ullam natus cumque quo, placeat reiciendis inventore dignissimos.</small>
+                            <small>Células con un núcleo celular delimitado dentro de una doble capa lipídica, la envoltura nuclear, la cual es porosa y contiene su material hereditario, fundamentalmente su información genética.</small>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="col-xs-6">
                     <div class="fadeInRight animated" id="img8-2" href="javascript:;">
-                        <img id="image8-2" src="img/plantilla.jpg" class="img-responsive img-thumbnail">
+                        <img id="image8-2" src="img/neuronas.jpg" class="img-responsive img-thumbnail">
                     </div>
                 </div>
             </div>
@@ -476,7 +680,7 @@
             <div class="row">
                 <div class="col-xs-6">
                     <div class="front fadeInLeft animated" id="img8-3" href="javascript:;">
-                        <img id="image8-3" src="img/plantilla.jpg" class="img-responsive img-thumbnail">
+                        <img id="image8-3" src="img/bacteria_verde.jpg" class="img-responsive img-thumbnail">
                     </div>
                 </div>
                 <div class="col-xs-6">
@@ -491,7 +695,7 @@
                 <div class="col-xs-12">
                     <div class="well well-sm">
                         <div class="row text-center">
-                            <h3>Texto ejemplo</h3>
+                            <h3>Célula eucariota</h3>
                         </div>
                     </div>
                 </div>
@@ -507,20 +711,14 @@
             <p>
             <div class="row">
                 <div class="col-xs-6">
-                    <div id="10">
                     <div class="front fadeInDown animated" id="img9-1" href="javascript:;">
-                        <img id="image9-1" src="img/plantilla.jpg" class="img-responsive img-thumbnail">
+                        <img id="image9-1" src="img/cells2.jpg" class="img-responsive img-thumbnail">
                     </div>
-                    <div class="back hidden" id="text-9">
-                        <div class="text-container img-thumbnail">
-                            <small>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae autem velit hic aspernatur esse nobis quo sunt a veritatis saepe. Officia quis ullam natus cumque quo, placeat reiciendis inventore dignissimos.</small>
-                            </div>
-                        </div>
-                    </div>
+                    
                 </div>
                 <div class="col-xs-6">
                     <div class="fadeInRight animated" id="img9-2" href="javascript:;">
-                        <img id="image9-2" src="img/plantilla.jpg" class="img-responsive img-thumbnail">
+                        <img id="image9-2" src="img/cancer.jpg" class="img-responsive img-thumbnail">
                     </div>
                 </div>
             </div>
@@ -528,13 +726,20 @@
             <p>
             <div class="row">
                 <div class="col-xs-6">
-                    <div class="front fadeInLeft animated" id="img9-3" href="javascript:;">
-                        <img id="image9-3" src="img/plantilla.jpg" class="img-responsive img-thumbnail">
+                    <div class="fadeInLeft animated" id="img9-3" href="javascript:;">
+                        <img id="image9-3" src="img/bacteria_morada.jpg" class="img-responsive img-thumbnail">
                     </div>
                 </div>
                 <div class="col-xs-6">
-                    <div  class="fadeInUp animated" id="img9-4" href="javascript:;">
-                        <img id="image9-4" src="img/plantilla.jpg" class="img-responsive img-thumbnail">
+                    <div id="10">
+                    <div class="front fadeInUp animated" id="img9-4" href="javascript:;">
+                        <img id="image9-4" src="img/neuronas.jpg" class="img-responsive img-thumbnail">
+                    </div>
+                    <div class="back hidden" id="text-9">
+                        <div class="text-container img-thumbnail">
+                            <small>Son un tipo de células del sistema nervioso cuya principal función es la excitabilidad eléctrica de su membrana plasmática; están especializadas en la recepción de estímulos y conducción del impulso nervioso entre ellas o con otros tipos celulares.</small>
+                        </div>
+                    </div>
                     </div>
                 </div>
             </div>
@@ -544,7 +749,7 @@
                 <div class="col-xs-12">
                     <div class="well well-sm">
                         <div class="row text-center">
-                            <h3>Texto ejemplo</h3>
+                            <h3>Neuronas</h3>
                         </div>
                     </div>
                 </div>
@@ -560,20 +765,13 @@
             <p>
             <div class="row">
                 <div class="col-xs-6">
-                    <div id="11">
-                    <div class="front fadeInDown animated" id="img10-1" href="javascript:;">
-                        <img id="image10-1" src="img/plantilla.jpg" class="img-responsive img-thumbnail">
-                    </div>
-                    <div class="back hidden" id="text-10">
-                        <div class="text-container img-thumbnail">
-                            <small>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae autem velit hic aspernatur esse nobis quo sunt a veritatis saepe. Officia quis ullam natus cumque quo, placeat reiciendis inventore dignissimos.</small>
-                            </div>
-                        </div>
+                    <div class="fadeInDown animated" id="img10-1" href="javascript:;">
+                        <img id="image10-1" src="img/cells4.jpg" class="img-responsive img-thumbnail">
                     </div>
                 </div>
                 <div class="col-xs-6">
                     <div class="fadeInRight animated" id="img10-2" href="javascript:;">
-                        <img id="image10-2" src="img/plantilla.jpg" class="img-responsive img-thumbnail">
+                        <img id="image10-2" src="img/cells3.jpg" class="img-responsive img-thumbnail">
                     </div>
                 </div>
             </div>
@@ -582,12 +780,19 @@
             <div class="row">
                 <div class="col-xs-6">
                     <div class="front fadeInLeft animated" id="img10-3" href="javascript:;">
-                        <img id="image10-3" src="img/plantilla.jpg" class="img-responsive img-thumbnail">
+                        <img id="image10-3" src="img/meiosis.jpg" class="img-responsive img-thumbnail">
                     </div>
                 </div>
                 <div class="col-xs-6">
-                    <div  class="fadeInUp animated" id="img10-4" href="javascript:;">
-                        <img id="image10-4" src="img/plantilla.jpg" class="img-responsive img-thumbnail">
+                    <div id="11">
+                    <div class="front fadeInUp animated" id="img10-4" href="javascript:;">
+                        <img id="image10-4" src="img/globulos_blancos.jpg" class="img-responsive img-thumbnail">
+                    </div>
+                    <div class="back hidden" id="text-10">
+                        <div class="text-container img-thumbnail">
+                            <small>Células sanguíneas que son los efectores celulares de la respuesta inmunitaria, interviniendo así en la defensa del organismo contra sustancias extrañas o agentes infecciosos. Se originan en la médula ósea y en el tejido linfático.</small>
+                        </div>
+                    </div>
                     </div>
                 </div>
             </div>
@@ -597,7 +802,7 @@
                 <div class="col-xs-12">
                     <div class="well well-sm">
                         <div class="row text-center">
-                            <h3>Texto ejemplo</h3>
+                            <h3>Leucocitos</h3>
                         </div>
                     </div>
                 </div>
@@ -612,7 +817,7 @@
     </div>
 
     <div class="container-fluid hidden" id="estadisticas">
-        <div class="panel panel-primary">
+        <div class="panel panel-primary" style="margin-top:20px;">
             <div class="panel-heading">
                 Resultados
             </div>
@@ -628,7 +833,7 @@
                 <div id="container-2" style="min-width: 310px; height: 160px; max-width: 600px; margin: 0 auto"></div>
             </div>
         </div>
-        <button class="btn btn-info btn-block">Aceptar</button>
+        <button id="btn-estadisticas" class="btn btn-primary btn-block">Continuar</button>
     </div>
     
     <div id="modal-continue" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
@@ -767,6 +972,7 @@
                             clearInterval(time);
                             $('#img'+lvl+'-2').removeClass('tada');
                             $('#img'+lvl+'-2').removeClass('animated');
+
                             $('#text-'+lvl).removeClass('hidden');
                             $('#'+lvlNext).flip();
                         }
@@ -832,13 +1038,13 @@
                             if(lvl == 1){answer = 2;}
                             if(lvl == 2){answer = 3;}
                             if(lvl == 3){answer = 1;}
-                            if(lvl == 4){answer = 1;}
+                            if(lvl == 4){answer = 4;}
                             if(lvl == 5){answer = 1;}
-                            if(lvl == 6){answer = 1;}
-                            if(lvl == 7){answer = 1;}
+                            if(lvl == 6){answer = 4;}
+                            if(lvl == 7){answer = 2;}
                             if(lvl == 8){answer = 1;}
-                            if(lvl == 9){answer = 1;}
-                            if(lvl == 10){answer = 1;}
+                            if(lvl == 9){answer = 4;}
+                            if(lvl == 10){answer = 4;}
 
                             var element = '#img'+lvl+'-'+answer;
                             var wrongElement = -1;
@@ -1080,7 +1286,157 @@
     </script>
 
     <script>
-    
+        $(document).ready(function(){
+            $('[data-toggle="tooltip"]').tooltip(); 
+        });
+    </script>
+
+    <!-- instrucciones-->
+    <script>
+        
+        $(document).ready(function(){
+            
+                $('#btn-next-1').click(function(){
+                    $('#ins-img1').removeClass('hidden');
+                    $('#ins-img2').removeClass('hidden');
+                    $('#globo-ayuda-1').addClass('hidden');
+                    $('#globo-ayuda-2').removeClass('hidden');
+                });
+                
+           
+                $('#btn-next-2').click(function(){
+                    $('#ins-concepto').removeClass('hidden');
+                    $('#globo-ayuda-2').addClass('hidden');
+                    $('#globo-ayuda-3').removeClass('hidden');
+                });
+                
+             
+                $('#btn-next-3').click(function(){
+                    $('#ins-siguiente').removeClass('hidden');
+                    $('#globo-ayuda-3').addClass('hidden');
+                    $('#globo-ayuda-4').removeClass('hidden');
+                });
+
+                $('#btn-next-4').click(function(){
+                    $('#main').removeClass('hidden');
+                    $('#instrucciones').addClass('hidden');
+                });
+
+                $('#btn-estadisticaHistorica').click(function(){
+                    $('#estadisticasHistorica').addClass('hidden');
+                    $('#main').removeClass('hidden');
+                });
+
+                $('#btn-estadisticas').click(function(){
+                    $('#estadisticas').addClass('hidden');
+                    $('#main').removeClass('hidden');
+                });
+            });
+    </script>
+
+
+    <!-- Menu principal-->
+    <script>
+        $(document).ready(function(){
+                $('#comenzar-btn').click(function(){
+                    $('#main').addClass('hidden');
+                    $('#preguntas').removeClass('hidden');
+                });
+
+                $('#instrucciones-btn').click(function(){
+                    $('#main').addClass('hidden');
+                    $('#instrucciones').removeClass('hidden');
+                });
+
+                $('#estadisticas-btn').click(function(){
+                    $('#main').addClass('hidden');
+                    $('#estadisticasHistorica').removeClass('hidden');
+                });
+
+            });
+    </script>
+
+    <script>
+        $(document).ready(function(){
+        var staticData_1 = [1,0,0,0,1,1,0,1,1,1];
+        var staticData_2 = [1,0,1,0,1,1,0,1,1,1];
+        var staticData_3 = [1,1,0,0,1,1,1,1,1,1];
+        var staticData_4 = [1,0,0,0,1,1,1,1,1,0];
+
+        loadData(staticData_1, '#container00');
+        loadData(staticData_2, '#container01');
+        loadData(staticData_3, '#container02');
+        loadData(staticData_4, '#container03');
+
+        function loadData (data, panel)
+        {
+            var data2 = [];
+
+                var cor = 0;
+                var inc = 0;
+
+                for (var i = 0; i < 10; i++) {
+                    if(data[i] == 0)
+                    {
+                        inc++;
+                    }
+                    else if(data[i] == 1)
+                    {
+                        cor++;
+                    }
+                }
+
+                data2[0] = inc/10;
+                data2[1] = cor/10;
+
+                $(panel).highcharts({
+                    chart: {
+                        spacing:[0,0,0,0],
+                        plotBackgroundColor: null,
+                        plotBorderWidth: 0,
+                        plotShadow: false,
+                    },
+                    colors: ['#55BF3B', '#DF5353'],
+                    title: {
+                        text: 'Respuestas',
+                        align: 'center',
+                        verticalAlign: '',
+                    },
+                    tooltip: {
+                        pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+                    },
+                    plotOptions: {
+                        pie: {
+                            size:210,
+                            dataLabels: {
+                                enabled: true,
+                                distance: -30,
+                                style: {
+                                    fontWeight: 'bold',
+                                    color: 'white',
+                                    textShadow: '0px 1px 2px black'
+                                }
+                            },
+                            startAngle: -90,
+                            endAngle: 90,
+                            center: ['50%', '90%']
+                        }
+                    },
+                    series: [{
+                        type: 'pie',
+                        name: 'Nivel 1',
+                        innerSize: '40%',
+                        data: [
+                            ['<b>Correctas</b>', data2[1]],
+                            ['<b>Incorrectas</b>', data2[0]],
+                        ]
+                    }],
+                    credits: {
+                        enabled: false
+                    },
+                });
+        }
+        });  
     </script>
 </body>
 </html>
