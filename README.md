@@ -9,7 +9,7 @@ This project has the purpose to show a functional interface from a biology trivi
 
 # Gallery
 
-<img src="http://i.imgur.com/PUeJdcS.png">
-<img src="http://i.imgur.com/2DidyEH.png">
-<img src="http://i.imgur.com/LqWAp6S.png">
-<img src="http://i.imgur.com/IbBPHmQ.png">
+<img src="http://i.imgur.com/PUeJdcS.png" width="50%" height="50%">
+<img src="http://i.imgur.com/2DidyEH.png" width="50%" height="50%">
+<img src="http://i.imgur.com/LqWAp6S.png" width="50%" height="50%">
+<img src="http://i.imgur.com/IbBPHmQ.png" width="50%" height="50%">
