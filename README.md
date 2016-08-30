@@ -9,4 +9,7 @@ This project has the purpose to show a functional interface from a biology trivi
 
 # Gallery
 
-<blockquote class="imgur-embed-pub" lang="en" data-id="Svv5QC8"><a href="//imgur.com/Svv5QC8">View post on imgur.com</a></blockquote><script async src="//s.imgur.com/min/embed.js" charset="utf-8"></script>
+<img src="http://i.imgur.com/PUeJdcS.png">
+<img src="http://i.imgur.com/2DidyEH.png">
+<img src="http://i.imgur.com/LqWAp6S.png">
+<img src="http://i.imgur.com/IbBPHmQ.png">
