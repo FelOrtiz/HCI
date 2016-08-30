@@ -9,4 +9,4 @@ This project has the purpose to show a functional interface from a biology trivi
 
 # Gallery
 
-<img src="http://imgur.com/PUeJdcS.png" alt="Home Screen">
+<blockquote class="imgur-embed-pub" lang="en" data-id="Svv5QC8"><a href="//imgur.com/Svv5QC8">View post on imgur.com</a></blockquote><script async src="//s.imgur.com/min/embed.js" charset="utf-8"></script>
